@@ -45,7 +45,7 @@ public class Hannaldous {
 
 	/**
 	 * Checks if password contains all characters in the alphabet or contains at
-	 * least one character that is not in the alphabet.
+	 * least one character that is not in the alphabet. No spaces allowed in passwords
 	 * 
 	 * @param password - String password input
 	 * @return - Indicates if a non-alphabetic character is in the password or not

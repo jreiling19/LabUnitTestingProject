@@ -31,5 +31,19 @@ public class HannaldousTest {
 		String[] password = new String[] {"Y"};
 		assertEquals(1, Hannaldous.passwordLengthCheck(2,password));
 	}
-
+	
+	@Test
+	public void testCharacersInAlphabet() {
+		assertEquals("Password contains at least one character not in alphabet", Hannaldous.charactersInAlphabet("bigmoose$"));
+		assertEquals("Password contains at least one character not in alphabet", Hannaldous.charactersInAlphabet("17"));
+		assertEquals("Password contains at least one character not in alphabet", Hannaldous.charactersInAlphabet("123goodbye"));
+		assertEquals("Password contains at least one character not in alphabet", Hannaldous.charactersInAlphabet("ok&y"));
+		assertEquals("Password contains characters all in alphabet", Hannaldous.charactersInAlphabet("emusareawesome"));
+		assertEquals("Password contains characters all in alphabet", Hannaldous.charactersInAlphabet("cat"));
+		assertEquals("Password contains characters all in alphabet", Hannaldous.charactersInAlphabet("APPLE"));
+		assertEquals("Password contains characters all in alphabet", Hannaldous.charactersInAlphabet("PiNeAPPle"));
+		assertEquals("Password contains characters all in alphabet", Hannaldous.charactersInAlphabet("AUGustaANa"));
+		assertEquals("Password contains characters all in alphabet", Hannaldous.charactersInAlphabet("MathDepartment"));
+		assertEquals("Password contains characters all in alphabet", Hannaldous.charactersInAlphabet("q"));
+	}
 }
