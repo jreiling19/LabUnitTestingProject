@@ -22,48 +22,47 @@ package edu.augustana.csc285.labs;
 
 public class Hannaldous {
 	/**
-	 * Checks each password in the passwordList (from back to front) and counts the passwords
-	 * that have a length less than passwordLength or the password itself is equal to "y"
+	 * Checks each password in the passwordList (from back to front) and counts the
+	 * passwords that have a length less than passwordLength or the password itself
+	 * is equal to "y"
 	 * 
 	 * @param passwordLength - Length of desired password
-	 * @param passwordList - String[] of passwords
-	 * @return - number of passwords that are less than desired length or are equal to "y"
+	 * @param passwordList   - String[] of passwords
+	 * @return - number of passwords that are less than desired length or are equal
+	 *         to "y"
 	 */
 	public static int passwordLengthCheck(int passwordLength, String[] passwordList) {
 		int passwordListIndex = passwordList.length - 1;
 		int count = 0;
-		//passwordLength = passwordListIndex;
-		for (int i = 0; i < passwordList.length; i = i + 1) 
-		{
-			if (passwordList[passwordListIndex].length() < passwordLength || charactersInAlphabet(passwordList[passwordListIndex]).equals("y"))
+		for (int i = 0; i < passwordList.length; i = i + 1) {
+			if (passwordList[passwordListIndex].length() < passwordLength || passwordList[passwordListIndex].toLowerCase().equals("y")) {
 				count++;
-			passwordListIndex--;  
+			}
+			passwordListIndex--;
 		}
 		return count;
-						}
-	
+	}
+
 	/**
-	 * Checks if password contains all characters in the alphabet or contains at least one 
-	 * character that is not in the alphabet.
+	 * Checks if password contains all characters in the alphabet or contains at
+	 * least one character that is not in the alphabet.
 	 * 
 	 * @param password - String password input
 	 * @return - Indicates if a non-alphabetic character is in the password or not
 	 */
-	static String charactersInAlphabet(String password) 
-	{
+	static String charactersInAlphabet(String password) {
 		int index = -1;
 		while (index++ < password.length() - 1) {
-			char ch = password.charAt(index); 
-			
-			if (! (ch >= 'a' && ch <='z'|| ch >='A' && ch <= 'Z')) 
-				return "Password contains at least one character not in alphabet"; 
-			}
-		return "Password contains characters all in alphabet"; 
+			char ch = password.charAt(index);
+
+			if (!(ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z'))
+				return "Password contains at least one character not in alphabet";
+		}
+		return "Password contains characters all in alphabet";
 	}
-	
-	
+
 	public static void main(String[] args) {
-		
+
 		System.out.println(charactersInAlphabet("bigmoose$"));
 		System.out.println(charactersInAlphabet("emusareawesome"));
 		System.out.println(charactersInAlphabet("17"));
@@ -71,9 +70,11 @@ public class Hannaldous {
 		System.out.println(charactersInAlphabet("ok&y"));
 		System.out.println(charactersInAlphabet("cat"));
 
-		//String[] passwords = new String[] { "bigmoose$", "emusareawesome", "123goodbye", "ok&y", "17", "cat" };
-		String[] passwords = new String[] { "big moose$", "emus are awesome", "123 goodbye", "ok&y ", "17", " cat", "y"};
-		System.out.println(passwordLengthCheck(8,passwords));
+		// String[] passwords = new String[] { "bigmoose$", "emusareawesome",
+		// "123goodbye", "ok&y", "17", "cat" };
+		String[] passwords = new String[] { "big moose$", "emus are awesome", "123 goodbye", "ok&y ", "17", " cat",
+				"y" };
+		System.out.println(passwordLengthCheck(0, passwords));
 
 	}
 }
