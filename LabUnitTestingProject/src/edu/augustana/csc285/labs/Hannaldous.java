@@ -58,7 +58,7 @@ public class Hannaldous {
 			if (! (ch >= 'a' && ch <='z'|| ch >='A' && ch <= 'Z')) 
 				return "Password contains at least one character not in alphabet"; 
 			}
-		return "Password contains characters all in alphabet";
+		return "Password contains characters all in alphabet"; 
 	}
 	
 	

@@ -10,7 +10,7 @@ public class HannaldousTest {
 	public void testPasswordLengthCheck() {
 		String[] passwords = new String[] { "bigmoose$", "emusareawesome", "123goodbye", "ok&y", "17", "cat", "y"};
 		assertEquals(4, Hannaldous.passwordLengthCheck(8,passwords));
-		assertEquals(2, Hannaldous.passwordLengthCheck(3,passwords));
+		assertEquals(2, Hannaldous.passwordLengthCheck(3,passwords)); 
 		assertEquals(0, Hannaldous.passwordLengthCheck(0,passwords));
 		assertEquals(1, Hannaldous.passwordLengthCheck(1,passwords));
 		assertEquals(0, Hannaldous.passwordLengthCheck(10,passwords));

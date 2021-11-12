@@ -7,7 +7,7 @@ public class StringUtils {
 	 * each letter of the alphabet some number of letters.  
 	 * For example, if the key is 1, the message ABC becomes BCD.
 	 * If the shift key is 2, ABC -> CDE (each letter is replaced by the letter two after it).
-	 * If the shift key is 2, EMU -> GOW 
+	 * If the shift key is 2, EMU -> GOW  
 	 * Also, if the key is -2, GOW -> EMU (each letter is replaced by the letter two before it.)
 	 * (Notice that a message can *always* be decoded by using the negative of the original key.)
 	 * 
